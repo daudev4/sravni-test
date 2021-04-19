@@ -2,23 +2,17 @@
   width: 100%;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 90px;
 
-  @include viewport--lg {
-    padding: 0 32px;
-  }
-
-  @include viewport--md {
-    padding: 0 24px;
-  }
-
-  @include viewport--sm {
-    padding: 0 16px;
+  @include viewport--mobile {
+    padding: 0 20px;
   }
 
   &--no-padding {
+    padding: 0;
+
     @include viewport--sm {
-      padding: 0;
+      padding: 0 20px;
     }
   }
 }
