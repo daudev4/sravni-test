@@ -11,7 +11,7 @@
   background-size: cover;
 
   @include viewport--mobile {
-    grid-template-columns: 1fr;
+    display: block;
   }
 
   &__inner {
@@ -57,17 +57,49 @@
   }
 
   &__figure-header {
-    display: flex;
-    justify-content: center;
+    .container {
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
 
     @include viewport--mobile {
-      justify-content: flex-start;
+      position: relative;
+      left: calc((100vw - 100%) / -2);
+
+      width: 100vw;
       padding-top: 20px;
       padding-bottom: 20px;
       order: 1;
 
       .quiz__to-main {
         margin-left: auto;
+      }
+
+      .container {
+        justify-content: flex-start;
+        max-width: 720px;
+        padding: 0 20px;
+      }
+
+      &.hide {
+        transition: background-color $transition, opacity $transition, visibility $transition;
+      }
+
+      &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+
+        width: 100vw;
+
+        transition: opacity $transition, visibility $transition;
+        background-color: rgba($color-white, 0.5);
+
+        & ~ .quiz__stage {
+          padding-top: 70px;
+        }
       }
     }
   }

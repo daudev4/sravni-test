@@ -496,6 +496,10 @@ button,
   .mobile-only:not(.hack-selector) {
     display: none; } }
 
+.hide {
+  visibility: hidden;
+  opacity: 0; }
+
 @-webkit-keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;
@@ -824,8 +828,7 @@ button,
   background-size: cover; }
   @media (max-width: 1023px) {
     .quiz {
-      -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr; } }
+      display: block; } }
   .quiz__inner {
     height: 100%;
     display: -webkit-box;
@@ -869,25 +872,46 @@ button,
     @media (max-width: 1023px) {
       .quiz__figure {
         background-image: none; } }
-  .quiz__figure-header {
+  .quiz__figure-header .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
-            justify-content: center; }
-    @media (max-width: 1023px) {
-      .quiz__figure-header {
+            justify-content: center;
+    padding: 0; }
+  @media (max-width: 1023px) {
+    .quiz__figure-header {
+      position: relative;
+      left: calc((100vw - 100%) / -2);
+      width: 100vw;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+      .quiz__figure-header .quiz__to-main {
+        margin-left: auto; }
+      .quiz__figure-header .container {
         -webkit-box-pack: start;
             -ms-flex-pack: start;
                 justify-content: flex-start;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        -webkit-box-ordinal-group: 2;
-            -ms-flex-order: 1;
-                order: 1; }
-        .quiz__figure-header .quiz__to-main {
-          margin-left: auto; } }
+        max-width: 720px;
+        padding: 0 20px; }
+      .quiz__figure-header.hide {
+        -webkit-transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+        transition: background-color 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
+      .quiz__figure-header--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        width: 100vw;
+        -webkit-transition: opacity 0.3s ease, visibility 0.3s ease;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        background-color: rgba(255, 255, 255, 0.5); }
+        .quiz__figure-header--fixed ~ .quiz__stage {
+          padding-top: 70px; } }
   .quiz__figure-image {
     width: 100%;
     margin-top: auto;

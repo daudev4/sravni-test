@@ -35,8 +35,9 @@ block main
       .quiz__figure
         .quiz__inner.container.container--align-right
           .quiz__figure-header
-            +logo-group({data: logoData})
-            +button({cssClass: "button--no-padding button--transparent quiz__to-main mobile-only", href: "#", icon: {name: "icon-arrow-left", width: 24, height: 24, left: true}})
+            .container
+              +logo-group({data: logoData})
+              +button({cssClass: "button--no-padding button--transparent quiz__to-main mobile-only", href: "#", icon: {name: "icon-arrow-left", width: 24, height: 24, left: true}})
           .quiz__figure-image
             +img("content", "question-image-2", "svg", "540", "540", "Кошелёк с деньгами")
           +stage({cssClass: "quiz__stage", current: 2, amount: 10})
