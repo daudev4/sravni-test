@@ -4,13 +4,27 @@
 
 // Default
 
-$color-default-black:             #000000;
-$color-default-white:             #ffffff;
+$color-black:                     #000000;
+$color-white:                     #ffffff;
 $color-transparent:               rgba(255, 255, 255, 0);
 
-// Base
+// Pallete
+
+$color-vulcan:                    #3c3e44;
+$color-suva-grey:                 #8c8c8c;
+$color-radical-red:               #ff4e50;
+
+// Colors
+
+$color-text:                        $color-vulcan;
+$color-text--light:                 $color-white;
+$color-background:                  $color-white;
+$color-accent:                      $color-radical-red;
 
 // Gradient
+$gradient-background:               linear-gradient(180deg, #FF3B52 0%, #FF6E50 100%);
+$gradient-stripes:                  repeating-linear-gradient(90deg, rgba($color-white, 0.03), rgba($color-white, 0.03) calc(100% / 13), transparent calc(100% / 13), transparent calc(2 * (100% / 13)));
+$gradient-stripes-mobile:           repeating-linear-gradient(90deg, rgba($color-white, 0.03), rgba($color-white, 0.03) calc(100% / 5), transparent calc(100% / 5), transparent calc(2 * (100% / 5)));
 
 // Typography
 //---------------------------------

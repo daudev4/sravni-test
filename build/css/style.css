@@ -1,0 +1,985 @@
+/* stylelint-disable */
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/* Sections
+ ========================================================================== */
+/**
+* Remove the margin in all browsers.
+*/
+body {
+  margin: 0; }
+
+/**
+* Render the `main` element consistently in IE.
+*/
+main {
+  display: block; }
+
+/**
+* Correct the font size and margin on `h1` elements within `section` and
+* `article` contexts in Chrome, Firefox, and Safari.
+*/
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* Grouping content
+ ========================================================================== */
+/**
+* 1. Add the correct box sizing in Firefox.
+* 2. Show the overflow in Edge and IE.
+*/
+hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Text-level semantics
+ ========================================================================== */
+/**
+* Remove the gray background on active links in IE 10.
+*/
+a {
+  background-color: transparent; }
+
+/**
+* 1. Remove the bottom border in Chrome 57-
+* 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+* Add the correct font weight in Chrome, Edge, and Safari.
+*/
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+* 1. Correct the inheritance and scaling of font size in all browsers.
+* 2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+* Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%; }
+
+/**
+* Prevent `sub` and `sup` elements from affecting the line height in
+* all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+ ========================================================================== */
+/**
+* Remove the border on images inside links in IE 10.
+*/
+img {
+  border-style: none; }
+
+/* Forms
+ ========================================================================== */
+/**
+* 1. Change the font styles in all browsers.
+* 2. Remove the margin in Firefox and Safari.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+* Show the overflow in IE.
+* 1. Show the overflow in Edge.
+*/
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+* Remove the inheritance of text transform in Edge, Firefox, and IE.
+* 1. Remove the inheritance of text transform in Firefox.
+*/
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+* Correct the inability to style clickable types in iOS and Safari.
+*/
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; }
+
+/**
+* Remove the inner border and padding in Firefox.
+*/
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+* Restore the focus styles unset by the previous rule.
+*/
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+* Correct the padding in Firefox.
+*/
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+* 1. Correct the text wrapping in Edge and IE.
+* 2. Correct the color inheritance from `fieldset` elements in IE.
+* 3. Remove the padding so developers are not caught out when they zero out
+*    `fieldset` elements in all browsers.
+*/
+legend {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+* Add the correct vertical alignment in Chrome, Firefox, and Opera.
+*/
+progress {
+  vertical-align: baseline; }
+
+/**
+* Remove the default vertical scrollbar in IE 10+.
+*/
+textarea {
+  overflow: auto; }
+
+/**
+* 1. Add the correct box sizing in IE 10.
+* 2. Remove the padding in IE 10.
+*/
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+* 1. Correct the odd appearance in Chrome and Safari.
+* 2. Correct the outline style in Safari.
+*/
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+* Remove the inner padding in Chrome and Safari on macOS.
+*/
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+* 1. Correct the inability to style clickable types in iOS and Safari.
+* 2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+ ========================================================================== */
+/*
+* Add the correct display in Edge, IE 10+, and Firefox.
+*/
+details {
+  display: block; }
+
+/*
+* Add the correct display in all browsers.
+*/
+summary {
+  display: list-item; }
+
+/* Misc
+ ========================================================================== */
+/**
+* Add the correct display in IE 10+.
+*/
+template {
+  display: none; }
+
+/**
+* Add the correct display in IE 10.
+*/
+[hidden] {
+  display: none; }
+
+@font-face {
+  font-style: normal;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/open-sans-400.woff2") format("woff2"), url("../fonts/open-sans-400.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-family: "Open Sans";
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/open-sans-600.woff2") format("woff2"), url("../fonts/open-sans-600.woff") format("woff"); }
+
+@font-face {
+  font-style: normal;
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/ubuntu-700.woff2") format("woff2"), url("../fonts/ubuntu-700.woff") format("woff"); }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html,
+body {
+  margin: 0;
+  padding: 0; }
+
+body {
+  width: 100%;
+  height: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Open Sans", "Arial", sans-serif;
+  color: #3c3e44;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+a {
+  color: #3c3e44;
+  text-decoration: none; }
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+textarea {
+  resize: none; }
+
+input:-webkit-autofill {
+  -webkit-box-shadow: inset 0 0 0 1000px #ffffff;
+          box-shadow: inset 0 0 0 1000px #ffffff;
+  -webkit-text-fill-color: #000000; }
+
+input,
+textarea {
+  border-radius: 0; }
+  input::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder {
+    opacity: 1; }
+  input::-moz-placeholder,
+  textarea::-moz-placeholder {
+    opacity: 1; }
+  input:-ms-input-placeholder,
+  textarea:-ms-input-placeholder {
+    opacity: 1; }
+  input::-ms-input-placeholder,
+  textarea::-ms-input-placeholder {
+    opacity: 1; }
+  input::placeholder,
+  textarea::placeholder {
+    opacity: 1; }
+  input:invalid,
+  textarea:invalid {
+    -webkit-box-shadow: none;
+            box-shadow: none; }
+
+select {
+  border-radius: 0; }
+
+input::-ms-clear, input::-ms-reveal {
+  display: none; }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+          appearance: none; }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+          appearance: none; }
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield; }
+
+select,
+textarea,
+input:matches([type="email"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="url"]) {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  clip: rect(0 0 0 0); }
+
+.wrapper {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  min-height: calc(100 * var(--vh, 1vh));
+  overflow-x: hidden; }
+  .wrapper--no-scrollbar {
+    height: 100vh;
+    height: calc(100 * var(--vh, 1vh));
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .wrapper--no-scrollbar::-webkit-scrollbar {
+      display: none; }
+  .wrapper .header,
+  .wrapper .footer {
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+  .wrapper main {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+
+.scroll-lock {
+  position: fixed;
+  overflow-y: auto; }
+
+.btn-reset {
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+  border: none;
+  cursor: pointer; }
+
+@media (max-width: 1023px) {
+  .not-mobile:not(.hack-selector) {
+    display: none; } }
+
+@media (min-width: 1024px) {
+  .mobile-only:not(.hack-selector) {
+    display: none; } }
+
+@-webkit-keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: hidden;
+    opacity: 0; } }
+
+@keyframes disableBreakpointAnimation {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: hidden;
+    opacity: 0; } }
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 90px; }
+  @media (max-width: 1023px) {
+    .container {
+      padding: 0 20px; } }
+  .container--align-right {
+    margin-right: 0;
+    margin-left: auto; }
+    @media (max-width: 1023px) {
+      .container--align-right {
+        margin: 0 auto; } }
+  .container--align-left {
+    margin-right: auto;
+    margin-left: 0; }
+    @media (max-width: 1023px) {
+      .container--align-left {
+        margin: 0 auto; } }
+  .container--no-padding {
+    padding: 0; }
+    @media (max-width: 1023px) {
+      .container--no-padding {
+        padding: 0 20px; } }
+
+.stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .stage__title {
+    margin: 0;
+    font-family: "Ubuntu", "Verdana", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center; }
+    @media (max-width: 1023px) {
+      .stage__title {
+        font-family: "Open Sans", "Arial", sans-serif;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: left; } }
+  .stage__indicator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    list-style: none; }
+  .stage__indicator-item {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 20px;
+    opacity: 0.3;
+    border-radius: 50%;
+    background-color: #ffffff;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    .stage__indicator-item:last-of-type {
+      margin-right: 0; }
+    .stage__indicator-item--active {
+      opacity: 1; }
+  @media (max-width: 1023px) {
+    .stage__current {
+      font-weight: 600; } }
+  @media (max-width: 1023px) {
+    .stage__total {
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.7); } }
+
+.logo-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .logo-group__item {
+    position: relative;
+    border-right: 2px solid transparent; }
+    .logo-group__item:not(:only-child) {
+      padding-right: 20px; }
+    .logo-group__item + .logo-group__item {
+      padding-right: 0;
+      padding-left: 20px; }
+      .logo-group__item + .logo-group__item::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 100%;
+        width: 2px;
+        height: 100%;
+        border-radius: 1px;
+        background-color: currentColor; }
+  .logo-group__link {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100%;
+    color: inherit;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .logo-group__link:hover, .logo-group__link:focus {
+        opacity: 0.5; } }
+    .logo-group__link svg,
+    .logo-group__link img {
+      display: block;
+      height: 20px;
+      width: auto;
+      -o-object-fit: contain;
+         object-fit: contain; }
+    @media (max-width: 1023px) {
+      .logo-group__link svg,
+      .logo-group__link img {
+        height: 16px; } }
+
+.radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .radio input[type="radio"] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    clip: rect(0 0 0 0); }
+  .radio label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
+    .radio label:hover {
+      color: #ff4e50; }
+    .radio label::before {
+      content: "";
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      margin-right: 10px;
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      -webkit-transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+      transition: opacity 0.3s ease, border-color 0.3s ease, background-color 0.3s ease; }
+    @media (max-width: 1023px) {
+      .radio label {
+        color: rgba(255, 255, 255, 0.7); }
+        .radio label:hover {
+          color: #ffffff; }
+        .radio label::before {
+          color: #ffffff; } }
+  .radio input[type="radio"]:focus ~ label {
+    outline: 1px solid #ff4e50; }
+    @media (max-width: 1023px) {
+      .radio input[type="radio"]:focus ~ label {
+        outline: none; } }
+  .radio input[type="radio"]:checked ~ label {
+    color: #ff4e50; }
+    .radio input[type="radio"]:checked ~ label::before {
+      opacity: 0.9;
+      background-color: currentColor; }
+    @media (max-width: 1023px) {
+      .radio input[type="radio"]:checked ~ label {
+        color: #ffffff; }
+        .radio input[type="radio"]:checked ~ label::before {
+          background-clip: content-box; } }
+
+.button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 17px 30px;
+  font: inherit;
+  font-weight: 600;
+  color: #ffffff;
+  -webkit-transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #ff4e50;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    .button:hover, .button:focus {
+      opacity: 0.5; } }
+  .button--no-padding {
+    padding: 0; }
+  .button--transparent {
+    color: #ff4e50;
+    background-color: transparent; }
+  .button--disabled {
+    background-color: #8c8c8c;
+    cursor: not-allowed;
+    pointer-events: none; }
+  .button__icon {
+    display: block;
+    -ms-flex-negative: 0;
+        flex-shrink: 0; }
+    .button__icon svg {
+      display: block; }
+    .button__icon--left {
+      margin-right: 5px; }
+    .button__icon--right {
+      margin-left: 5px; }
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgba(60, 62, 68, 0.5); }
+  @media (max-width: 1023px) {
+    .social {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      color: rgba(255, 255, 255, 0.7); } }
+  .social__title {
+    font-weight: 400;
+    margin: 0;
+    margin-right: 20px; }
+    @media (max-width: 1023px) {
+      .social__title {
+        margin-right: 0;
+        margin-bottom: 15px; } }
+  .social__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  .social__item {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+    margin-right: 20px; }
+    .social__item:last-of-type {
+      margin-right: 0; }
+    @media (max-width: 1023px) {
+      .social__item {
+        margin-right: 15px; } }
+  .social__link {
+    display: block;
+    color: inherit;
+    -webkit-transition: color 0.3s ease;
+    transition: color 0.3s ease; }
+    @media (hover: hover), screen and (min-width: 0\0) {
+      .social__link:hover, .social__link:focus {
+        color: #3c3e44; } }
+    .social__link svg {
+      display: block; }
+    @media (max-width: 1023px) {
+      .social__link {
+        padding: 10px;
+        color: #ff4e50;
+        border-radius: 50%;
+        background-color: #ffffff; } }
+
+.quiz {
+  min-height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #ff4e50;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF3B52), to(#FF6E50));
+  background-image: linear-gradient(180deg, #FF3B52 0%, #FF6E50 100%);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover; }
+  @media (max-width: 1023px) {
+    .quiz {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr; } }
+  .quiz__inner {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 720px;
+    max-height: 800px;
+    padding-top: 60px;
+    padding-bottom: 60px; }
+    @media (max-width: 1023px) {
+      .quiz__inner {
+        max-height: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) calc(100% / 5), transparent calc(100% / 5), transparent calc(2 * (100% / 5)));
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+        background-origin: content-box; } }
+  .quiz__figure, .quiz__main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .quiz__figure {
+    color: #ffffff;
+    background-image: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.03) calc(100% / 13), transparent calc(100% / 13), transparent calc(2 * (100% / 13)));
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: cover; }
+    @media (max-width: 1023px) {
+      .quiz__figure {
+        background-image: none; } }
+  .quiz__figure-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    @media (max-width: 1023px) {
+      .quiz__figure-header {
+        -webkit-box-pack: start;
+            -ms-flex-pack: start;
+                justify-content: flex-start;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+        .quiz__figure-header .quiz__to-main {
+          margin-left: auto; } }
+  .quiz__figure-image {
+    width: 100%;
+    margin-top: auto;
+    margin-bottom: -40px; }
+    .quiz__figure-image img {
+      width: 100%; }
+    @media (max-width: 1023px) {
+      .quiz__figure-image {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        max-width: 540px;
+        margin-top: 15px;
+        margin-bottom: 0;
+        margin-right: auto;
+        margin-left: auto; } }
+  .quiz__stage {
+    margin-top: auto;
+    padding-top: 6px;
+    padding-bottom: 10px; }
+    @media (max-width: 1023px) {
+      .quiz__stage {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+        margin-top: 15px;
+        padding-top: 0;
+        padding-bottom: 0; }
+        .quiz__stage .stage__indicator {
+          display: none; } }
+  .quiz__main {
+    color: #3c3e44;
+    background-color: #ffffff; }
+    .quiz__main .quiz__inner {
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; }
+    @media (max-width: 1023px) {
+      .quiz__main {
+        color: #ffffff;
+        background-color: transparent; }
+        .quiz__main .quiz__inner {
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; } }
+  @media (max-width: 1023px) {
+    .quiz__to-main {
+      color: #ffffff; } }
+  .quiz__question {
+    max-width: 535px;
+    margin-top: 60px; }
+    .quiz__question:first-child {
+      margin-top: 0; }
+    @media (max-width: 1023px) {
+      .quiz__question {
+        padding-top: 15px; }
+        .not-mobile + .quiz__question {
+          margin-top: 0; } }
+  .quiz__question-title {
+    margin: 0;
+    font-family: "Ubuntu", "Verdana", sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px; }
+    @media (max-width: 1023px) {
+      .quiz__question-title {
+        font-size: 18px;
+        line-height: 22px; } }
+  .quiz__answer-list {
+    margin: 0;
+    margin-top: 40px;
+    padding: 0;
+    list-style: none; }
+    @media (max-width: 1023px) {
+      .quiz__answer-list {
+        margin-top: 30px; } }
+  .quiz__answer-item + .quiz__answer-item {
+    margin-top: 15px; }
+  .quiz__next-button {
+    margin-top: 40px; }
+    @media (max-width: 1023px) {
+      .quiz__next-button {
+        width: 100%;
+        margin-top: 30px; }
+        .quiz__next-button:not(.button--disabled) {
+          color: #3c3e44;
+          background-color: #ffffff; } }
+  .quiz__social {
+    margin-top: auto; }
+    @media (max-width: 1023px) {
+      .quiz__social {
+        margin-top: 30px;
+        padding-bottom: 20px; } }

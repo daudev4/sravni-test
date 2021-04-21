@@ -4,10 +4,26 @@
   }
 }
 
+@mixin hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+
+  clip: rect(0 0 0 0);
+}
+
 // Desktop first
 
 @mixin viewport--mobile {
   @media (max-width: $viewport--lg - 1) {
+    @content;
+  }
+}
+
+@mixin viewport--not-mobile {
+  @media (min-width: $viewport--lg) {
     @content;
   }
 }

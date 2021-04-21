@@ -1,0 +1,65 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    margin: 0;
+
+    font-family: $font-family--title;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+
+    @include viewport--mobile {
+      font-family: $font-family--default;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: left;
+    }
+  }
+
+  &__indicator {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+
+    list-style: none;
+  }
+
+  &__indicator-item {
+    display: block;
+    width: 12px;
+    height: 12px;
+    margin-right: 20px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    opacity: 0.3;
+    border-radius: 50%;
+    background-color: $color-background;
+    transition: opacity $transition;
+
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__current {
+    @include viewport--mobile {
+      font-weight: 600;
+    }
+  }
+
+  &__total {
+    @include viewport--mobile {
+      font-weight: 400;
+      color: rgba($color-text--light, 0.7);
+    }
+  }
+}

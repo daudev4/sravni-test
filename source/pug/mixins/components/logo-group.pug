@@ -1,0 +1,9 @@
+mixin logo-group(props)
+  ul.logo-group(class!= props.cssClass)&attributes(attributes)
+    each item in props.data
+      li.logo-group__item
+        a.logo-group__link(href="#" aria-label!= item.label target='_blank', rel='nofollow noopener')
+          if (item.icon)
+            +icon(item.icon.name, item.icon.width, item.icon.height)
+          if (item.img)
+            +img(item.img.path, item.img.name, item.img.format, item.img.width, item.img.height, item.img.alt)

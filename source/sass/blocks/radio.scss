@@ -1,0 +1,71 @@
+.radio {
+  display: flex;
+
+  input[type="radio"] {
+    @include hidden;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+    transition: color $transition;
+
+    &:hover {
+      color: $color-accent;
+    }
+
+    &::before {
+      content: "";
+
+      flex-shrink: 0;
+      display: block;
+      width: 16px;
+      height: 16px;
+      padding: 2px;
+      margin-right: 10px;
+
+      border-radius: 50%;
+      border: 2px solid currentColor;
+      transition: opacity $transition, border-color $transition, background-color $transition;
+    }
+
+    @include viewport--mobile {
+      color: rgba($color-text--light, 0.7);
+
+      &:hover {
+        color: $color-text--light;
+      }
+
+      &::before {
+        color: $color-text--light;
+      }
+    }
+  }
+
+  input[type="radio"]:focus ~ label {
+    outline: 1px solid $color-accent;
+
+    @include viewport--mobile {
+      outline: none;
+    }
+  }
+
+  input[type="radio"]:checked ~ label {
+    color: $color-accent;
+
+    &::before {
+      opacity: 0.9;
+      background-color: currentColor;
+    }
+
+    @include viewport--mobile {
+      color: $color-text--light;
+
+      &::before {
+        background-clip: content-box;
+      }
+    }
+  }
+}

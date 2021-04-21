@@ -1,73 +1,59 @@
 extends ../base/layout
 
+block data
+
 block variables
-  - var title = "Оглавление"
-
-block main
-  style.
-    .container {
-      padding-top: 50px;
-      padding-bottom: 50px;
-    }
-
-    h1 {
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    a {
-      color: rgb(10, 10, 175);
-    }
-
-    li {
-      font-size: 18px;
-      line-height: 22px;
-      margin-bottom: 7px;
-    }
-
-    img {
-      width: 100%;
-      max-width: 300px;
-      height: auto;
-      display: block;
-      margin-bottom: 40px;
-    }
-
-    @media (max-width: 768px) {
-      ol {
-        padding-left: 20px;
-      }
-
-      ol li {
-        margin-bottom: 15px;
-      }
-
-      .container {
-        padding-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-
+  - var title = "Тест"
+  - var wrapperMod = ""
+  - var currentPage = "main"
   -
-    var pages = [
+    var logoData = [
       {
-        name: "UI Kit — components.html",
-        src: "components.html"
+        label: "Переход на сайт Сравни.ру",
+        icon: {
+          name: "logo-sravni",
+          width: 109,
+          height: 20,
+        },
       },
       {
-        name: "Главная — main.html",
-        src: "main.html"
-      },
-      {
-        name: "Название страницы (состояние страницы, если отдельное) — ссылка на страницу",
-        src: "#"
+        label: "Переход на сайт Халвы",
+        icon: {
+          name: "logo-halva",
+          width: 88,
+          height: 20,
+        },
       },
     ]
 
-  main.container.main-index
-    img(src="https://via.placeholder.com/300x150" width="300" alt="Логотип проекта")
-    h1 Список страниц и компонентов
-    ol
-      each page in pages
-        li
-          a(href= page.src)= page.name
+
+block main
+  main
+    h1.visually-hidden
+      | Тест: что ваши траты говорят о вас?
+    section.quiz
+      .quiz__figure
+        .quiz__inner.container.container--align-right
+          .quiz__figure-header
+            +logo-group({data: logoData})
+            +button({cssClass: "button--no-padding button--transparent quiz__to-main mobile-only", href: "#", icon: {name: "icon-arrow-left", width: 24, height: 24, left: true}})
+          .quiz__figure-image
+            +img("content", "question-image-2", "svg", "540", "540", "Кошелёк с деньгами")
+          +stage({cssClass: "quiz__stage", current: 2, amount: 10})
+      .quiz__main
+        .quiz__inner.container.container--align-left
+          +button({cssClass: "button--no-padding button--transparent quiz__to-main not-mobile", href: "#", text: "Вернуться на главную", icon: {name: "icon-arrow-left", left: true}})
+          .quiz__question
+            h2.quiz__question-title Представьте, вам заплатили премию, как вы её потратите?
+            ul.quiz__answer-list
+              li.quiz__answer-item
+                +radio({id: "answer-2-1", name: "question-2", value: "1", label: "Поищу, куда выгоднее вложить деньги"})
+              li.quiz__answer-item
+                +radio({id: "answer-2-2", name: "question-2", value: "2", label: "Внесу досрочный платёж по кредиту"})
+              li.quiz__answer-item
+                +radio({id: "answer-2-3", name: "question-2", value: "3", label: "Пока что не знаю. Потрачу с удовольствием для себя "})
+              li.quiz__answer-item
+                +radio({id: "answer-2-4", name: "question-2", value: "4", label: "Оплачу отдых своим близким "})
+
+            +button({cssClass: "button--disabled quiz__next-button", href: "#", text: "Следующий вопрос", icon: {name: "icon-arrow-right", right: true}})
+          +social({title: "Рассказать друзьям", cssClass: "quiz__social"})

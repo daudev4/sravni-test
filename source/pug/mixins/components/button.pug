@@ -1,0 +1,21 @@
+mixin button(props)
+  if (props.href)
+    a.button(class!= props.cssClass ? `${props.cssClass}` : null, href!= props.href ? props.href : '#')&attributes(attributes)
+      if (props.icon.left)
+        span.button__icon(class= props.text ? "button__icon--left" : null)
+          +icon(props.icon.name, props.icon.width ? props.icon.width : 20 , props.icon.height ? props.icon.height : 20)
+      if (props.text)
+        span.button__text= props.text
+      if (props.icon.right)
+        span.button__icon(class= props.text ? "button__icon--right" : null)
+          +icon(props.icon.name, props.icon.width ? props.icon.width : 20 , props.icon.height ? props.icon.height : 20)
+  else
+    button.button(class!= props.cssClass ? `${props.cssClass}` : null, type!= props.type ? props.type : 'button', disabled= props.isDisabled ? true : null)&attributes(attributes)
+      if (props.icon.left)
+        span.button__icon(class= props.text ? "button__icon--left" : null)
+          +icon(props.icon.name, props.icon.width ? props.icon.width : 20 , props.icon.height ? props.icon.height : 20)
+      if (props.text)
+        span.button__text= props.text
+      if (props.icon.right)
+        span.button__icon(class= props.text ? "button__icon--right" : null)
+          +icon(props.icon.name, props.icon.width ? props.icon.width : 20 , props.icon.height ? props.icon.height : 20)

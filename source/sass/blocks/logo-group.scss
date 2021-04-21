@@ -1,0 +1,71 @@
+.logo-group {
+  display: flex;
+  min-height: 30px;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  &__item {
+    position: relative;
+
+    &:not(:only-child) {
+      padding-right: 20px;
+    }
+
+    border-right: 2px solid transparent;
+
+    & + & {
+      padding-right: 0;
+      padding-left: 20px;
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        top: 0;
+        right: 100%;
+
+        width: 2px;
+        height: 100%;
+
+        border-radius: 1px;
+        background-color: currentColor;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    color: inherit;
+
+    transition: opacity $transition;
+
+    @media (hover: hover), screen and (min-width: 0\0) {
+      &:hover,
+      &:focus {
+        opacity: 0.5;
+      }
+    }
+
+    svg,
+    img {
+      display: block;
+
+      height: 20px;
+      width: auto;
+
+      object-fit: contain;
+    }
+
+    @include viewport--mobile {
+      svg,
+      img {
+        height: 16px;
+      }
+    }
+  }
+}

@@ -8,10 +8,28 @@
     padding: 0 20px;
   }
 
+  &--align-right {
+    margin-right: 0;
+    margin-left: auto;
+
+    @include viewport--mobile {
+      margin: 0 auto;
+    }
+  }
+
+  &--align-left {
+    margin-right: auto;
+    margin-left: 0;
+
+    @include viewport--mobile {
+      margin: 0 auto;
+    }
+  }
+
   &--no-padding {
     padding: 0;
 
-    @include viewport--sm {
+    @include viewport--mobile {
       padding: 0 20px;
     }
   }

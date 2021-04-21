@@ -1,0 +1,24 @@
+mixin stage(props)
+  .stage(class!= props.cssClass)&attributes(attributes)
+    p.stage__title
+      span.stage__current
+        span.stage__title-text.not-mobile
+          | Вопрос
+          |
+        span.stage__current-number!= props.current
+        span.stage__title-text.mobile-only
+          |
+          | вопрос
+      span.stage__total
+        span.stage__separator
+          span.mobile-only
+            | из
+            |
+          span.not-mobile /
+        span.stage__total-number!= props.amount
+    ul.stage__indicator
+      - for (var n = 1; n <= props.amount; n++)
+        if (n <= props.current)
+          li.stage__indicator-item.stage__indicator-item--active
+        else
+          li.stage__indicator-item

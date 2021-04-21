@@ -1,0 +1,7 @@
+mixin radio(props)
+  div(class= (props.cssClass) ? `radio ${props.cssClass}` : "radio")&attributes(attributes)
+    input(type="radio", id=props.id, name=props.name, value=props.value, checked=props.checked, required)
+    if(props.label)
+      label(for=props.id)
+        span= props.label
+

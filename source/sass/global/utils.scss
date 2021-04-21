@@ -53,6 +53,19 @@
   cursor: pointer;
 }
 
+
+.not-mobile:not(.hack-selector) {
+  @include viewport--mobile {
+    display: none;
+  }
+}
+
+.mobile-only:not(.hack-selector) {
+  @include viewport--not-mobile {
+    display: none;
+  }
+}
+
 @keyframes disableBreakpointAnimation {
   0% {
     visibility: hidden;
