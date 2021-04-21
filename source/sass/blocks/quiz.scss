@@ -92,10 +92,10 @@
         left: 0;
         z-index: 10;
 
-        width: 100vw;
+        color: $color-text;
 
-        transition: opacity $transition, visibility $transition;
         background-color: rgba($color-white, 0.5);
+        transition: opacity $transition, visibility $transition;
 
         & ~ .quiz__stage {
           padding-top: 70px;
@@ -162,7 +162,7 @@
 
   &__to-main {
     @include viewport--mobile {
-      color: $color-text--light;
+      color: inherit;
     }
   }
 

@@ -1,32 +1,34 @@
 const initHeader = () => {
   const header = document.querySelector('.quiz__figure-header');
-  const headerHeight = header.offsetHeight;
 
-  let lastScroll = 0;
+  if (header) {
+    let lastScroll = 0;
+    const headerHeight = header.offsetHeight;
 
-  const onWindowScroll = () => {
-    const currentScroll = Math.round(window.pageYOffset);
+    const onWindowScroll = () => {
+      const currentScroll = Math.round(window.pageYOffset);
 
-    if (currentScroll < lastScroll) {
-      if (!((window.innerHeight + currentScroll) >= document.body.offsetHeight)) {
-        header.classList.add('hide');
+      if (currentScroll < lastScroll) {
+        if (!((window.innerHeight + currentScroll) >= document.body.offsetHeight)) {
+          header.classList.add('hide');
+        }
+
+        if (currentScroll < headerHeight) {
+          header.classList.remove('quiz__figure-header--fixed');
+          header.classList.remove('hide');
+        }
+      } else {
+        if (currentScroll > headerHeight) {
+          header.classList.add('quiz__figure-header--fixed');
+          header.classList.remove('hide');
+        }
       }
 
-      if (currentScroll < headerHeight) {
-        header.classList.remove('quiz__figure-header--fixed');
-        header.classList.remove('hide');
-      }
-    } else {
-      if (currentScroll > headerHeight) {
-        header.classList.add('quiz__figure-header--fixed');
-        header.classList.remove('hide');
-      }
-    }
+      lastScroll = currentScroll;
+    };
 
-    lastScroll = currentScroll;
-  };
-
-  window.addEventListener('scroll', onWindowScroll);
+    window.addEventListener('scroll', onWindowScroll);
+  }
 };
 
 export {initHeader};
